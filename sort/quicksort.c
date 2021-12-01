@@ -1,0 +1,10 @@
+
+int partion() {
+  
+}
+
+
+int main () {
+
+  
+}
