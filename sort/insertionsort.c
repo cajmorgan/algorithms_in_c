@@ -25,24 +25,30 @@
  * [1, 1, 2, 3, 4]
  * 
  * **/
+
+int insertionSortIterations = 0;
 void insertionsort(int arr[], int length) {
   for (int i = 1; i < length; i++) {
     int j = i;
+    insertionSortIterations++;
     while(j > 0 && arr[j-1] > arr[j]) {
       swap(arr, j, j-1);
       j--;
+      insertionSortIterations++;
     }
   }
 }
 
 
 int main() {
-  int input[] = { 3, 2, 5, 1, 4 };
-  int length = 5;
+  int input[] = { 3, 2, 7, 5, 2, 9, 23, 53, 1, 23, 43, 57, 95, 67, 23, 54 };
+  int length = 16;
   insertionsort(input, length);
 
   for (int i = 0; i < length; i++) {
-    printf("%d", input[i]);
+    printf("%d\n", input[i]);
   }
+
+  printf("PERFORMANCE: %d", insertionSortIterations);
 
 }

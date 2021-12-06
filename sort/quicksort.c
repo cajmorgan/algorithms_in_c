@@ -20,13 +20,14 @@
  * 
 // */
 
-
+int quickSortIterations = 0;
 int partion(int arr[], int low, int high) {
   int pivotIndex = high;
   int pivot = arr[pivotIndex];
   int j = 0;
 
   while (pivotIndex > j) {
+    quickSortIterations++;
     if (arr[j] > pivot) {
       swap(arr, j, pivotIndex-1);
       swap(arr, pivotIndex - 1, pivotIndex);
