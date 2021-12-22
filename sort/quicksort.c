@@ -4,6 +4,7 @@
 
 /** QUICKSORT 
  * Effeciency: O(nlog2n)
+ * worse case: O(n²)
  * 
  * Partioning
  * Places a pivot always as the highest point in the 'subarray'
